@@ -1,0 +1,326 @@
+<!doctype html>
+<html>
+
+
+	<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Signika:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+		<style>
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body{
+				margin: 0;
+				font-family: 'Signika', sans-serif;
+				font-size: 20px;
+				background-image: url(images/bg.png);
+				background-size: cover;
+				background-position: center;
+			}
+
+			.navbar{
+    				box-shadow: 5px 10px 30px rgba(90,118,253,0.5);
+				padding: 10px;
+				overflow: hidden;
+			}
+			.navbar .logo{
+				font-family: 'Pacifico', cursive;
+				font-size: 18px;
+			}
+			.navbar a {
+				text-decoration: none;
+				color:#111;
+				padding: 10px;
+				float: left;
+				margin: 0;
+			}
+
+			.icon{
+				float: right;
+				display:none;
+			}
+
+input[type=text], input[type=password] {
+     margin: 5px 0 22px 0;
+    background: #f1f1f1;
+    display: block;
+    width: 60%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+button {
+  background-color: #219e43;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button:hover {
+    outline: 0;
+    box-shadow: 0 5px 11px 0 rgb(0 0 0 / 18%), 0 4px 15px 0 rgb(0 0 0 / 15%)
+}
+
+ .sign {
+  width: 30%;
+}
+
+.container {
+ padding: 40px;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 70px;
+}
+a {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: none;
+}
+form {
+    width: 500px;
+    margin: auto;
+    max-width: 93%;
+}
+			
+			@media only screen and (max-width: 700px){
+
+
+
+				.navbar a:not(:first-child) {
+					display:none;
+				}
+
+				.navbar {
+					position: relative;
+				}
+
+				.navbar a.icon {
+					display: block;
+					float:right;
+
+
+					position: absolute;
+					top: 0;
+					right: 0;
+
+								
+				}
+
+
+				div.navbar.clicked a {
+					
+					display: block;
+					float: none;
+
+				}
+				
+			}
+
+
+.content1{
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #202020;
+}
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: #202020;
+}
+footer {
+    color: black;
+    width: 100%;
+    box-shadow: 5px 10px 30px rgb(90 118 253 / 50%);
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+
+.left .content p{
+  text-align: justify;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  box-shadow: 5px 10px 30px rgb(90 118 253 / 50%);
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  box-shadow: 5px 10px 30px rgb(90 118 253 / 30%); 
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  box-shadow: 5px 10px 30px rgb(90 118 253 / 50%);
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
+
+		</style>
+
+
+	</head>
+
+	<body>
+
+		<div class="navbar" id="nav">
+			<a href="index.html" class="logo">EBook Center</a>
+			<a href="index.html">Home</a>
+			<a href="book.html">Book</a>
+			<a href="sign in.html">Sign In</a>
+
+			<a href="javascript:void(0);" class="icon" onclick="handleClick()">
+				<i class="fa fa-bars"></i>
+			</a>
+
+
+		</div>
+		 <div class="container">
+
+<form>
+
+      <h1>Create Account</h1>
+
+      <label f>Name*</label>
+      <input type="text" placeholder="Enter Name" name="name" >
+
+      <label f>Phone*</label>
+      <input type="text" placeholder="Enter Phone" name="phone" >
+
+      <label >Email*</label>
+      <input type="text" placeholder="Enter Email" name="email" >
+
+      <label> Password*</label>
+      <input type="text" placeholder="Password" name="password" >
+      
+        <button type="submit" class="sign">Register</button>
+
+         <p>Do you have an account? <a href="sign in.html">Sign In </a> Here</p>
+   </form>  
+    </div>
+
+<footer>
+     	 <div class="main-content">
+        	<div class="left box">
+         	 <h2>About us</h2>
+         	 <div class="content">
+            <p>ebrary was an online digital library which held over 100,000 scholarly e-books in 2014. It was available in many academic libraries and provided a set of online database collections that combined scholarly books from over 435 academic, trade, and professional publishers.</p>
+        	  </div>
+      	  </div>
+
+       	 <div class="center box">
+         	 <h2>Address</h2>
+          	<div class="content">
+            	<div class="place">
+            	  <span class="fas fa-map-marker-alt"></span>
+            	  <span class="text">Kathmandu, Nepal</span>
+            	</div>
+           	 <div class="phone">
+            	  <span class="fas fa-phone-alt"></span>
+            	  <span class="text">+089-765432100</span>
+          	  </div>
+           	 <div class="email">
+              	<span class="fas fa-envelope"></span>
+             	 <span class="text">ebookcenter377@gmail.com</span>
+           	 </div>
+     	    </div>
+      	 </div>
+     	 </div>
+     	 <div class="bottom">
+      	  <center>
+        	  <span class="credit">Created By EBook Center | </span>
+        	  <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+        	</center>
+     	 </div>
+    </footer>
+
+
+		<script>
+			function handleClick(){
+			let nav = document.getElementById("nav");
+				if(nav.className === "navbar"){
+				nav.className += " clicked";
+				}	
+				else{
+					nav.className = "navbar";	
+				}
+			}
+
+		</script>
+
+
+
+
+	</body>
+
+</html>
